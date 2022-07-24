@@ -1,0 +1,8 @@
+FROM ubuntu:latest
+MAINTAINER maerifat@gmail.com
+WORKDIR /home
+RUN mkdir -p /home/tools
+RUN apt-get update -y
+RUN apt-get install adb -y
+RUN pip install frida-tools
+COPY tools /home/tools
