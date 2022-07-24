@@ -38,3 +38,4 @@ RUN apt install python-is-python3
 RUN mv /home/tools/bytecode-viewer.jar /usr/local/bin/bytecode-viewer.jar \
 	&& echo "java -jar /usr/local/bin/bytecode-viewer.jar" > /usr/local/bin/bytecode-viewer \
 	&& chmod +x /usr/local/bin/bytecode-viewer
+#testing...
