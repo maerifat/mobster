@@ -14,15 +14,17 @@ RUN apt-get install -y \
     wget \
     xdg-utils \
     adb \
-    python3-pip 
+    python3-pip \
+    default-jdk \
+    default-jre
 RUN pip install frida-tools 
 
 COPY tools /home/tools
 RUN mv apktool /usr/local/bin \
     && mv apktool.jar /usr/local/bin \
     && chmod +x /usr/local/bin/*
-RUN apt install default-jdk -y
-RUN apt install default-jre -y
+#RUN apt install default-jdk -y
+#RUN apt install default-jre -y
 RUN wget -nv https://github.com/java-decompiler/jd-gui/releases/download/v1.6.6/jd-gui-1.6.6.deb -O jdgui.deb \
     && sudo mkdir /usr/share/desktop-directories \
     && dpkg -i jdgui.deb \
@@ -39,3 +41,4 @@ RUN mv /home/tools/bytecode-viewer.jar /usr/local/bin/bytecode-viewer.jar \
 	&& echo "java -jar /usr/local/bin/bytecode-viewer.jar" > /usr/local/bin/bytecode-viewer \
 	&& chmod +x /usr/local/bin/bytecode-viewer
 #testing...
+#here we go
