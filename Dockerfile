@@ -1,5 +1,5 @@
 FROM ubuntu:22.04
-MAINTAINER maerifat@gmail.com
+LABEL org.opencontainers.image.authors="maerifat@gmail.com"
 WORKDIR /home/tools
 RUN mkdir -p /home/tools
 RUN apt-get update -y
@@ -12,15 +12,15 @@ RUN apt-get install -y \
     vim \
     nano \
     wget \
-    xdg-utils
-RUN apt-get install adb -y
-RUN apt-get install python3-pip -y
+    xdg-utils \
+    adb \
+    python3-pip 
 RUN pip install frida-tools 
-#CMD ["echo", "hello"]
+
 COPY tools /home/tools
-RUN mv apktool /usr/local/bin
-RUN mv apktool.jar /usr/local/bin
-RUN chmod +x /usr/local/bin/*
+RUN mv apktool /usr/local/bin \
+    && mv apktool.jar /usr/local/bin \
+    && chmod +x /usr/local/bin/*
 RUN apt install default-jdk -y
 RUN apt install default-jre -y
 RUN wget -nv https://github.com/java-decompiler/jd-gui/releases/download/v1.6.6/jd-gui-1.6.6.deb -O jdgui.deb \
@@ -31,7 +31,6 @@ RUN wget -nv https://github.com/java-decompiler/jd-gui/releases/download/v1.6.6/
         -jar /opt/jd-gui/jd-gui.jar" > /usr/local/bin/jd-gui \
     && chmod +x /usr/local/bin/jd-gui 
 RUN pip3 install objection
-#RUN dpkg -i /home/tools/drozer.deb
 RUN git clone https://github.com/b-mueller/apkx && cd apkx && sudo ./install.sh
 RUN apt install python-is-python3
 #ENTRYPOINT ["java", "-jar", "/home/tools/Bytecode-Viewer-2.11.2.jar"]
