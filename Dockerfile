@@ -18,7 +18,6 @@ RUN apt-get install -y \
     default-jdk \
     default-jre
 RUN pip install frida-tools 
-
 COPY tools /home/tools
 RUN mv apktool /usr/local/bin \
     && mv apktool.jar /usr/local/bin \
