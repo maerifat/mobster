@@ -1,4 +1,4 @@
-# mobster
+# MOBSTER
 ---
 
 ## About
@@ -14,7 +14,9 @@ Directly pull image from docker hub *(recommended)*
 docker pull maerifat/mobster
 ```
 ### OR
+
 Build image from Dockerfile
+
 ```
 git clone https://github.com/maerifat/mobster && cd mobster && docker build . -t maerifat/mobster
 ```
