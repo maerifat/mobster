@@ -31,4 +31,5 @@ git clone https://github.com/maerifat/mobster && cd mobster && docker build . -t
 - [objection](https://github.com/sensepost/objection)
 - [drozer](https://github.com/FSecureLABS/drozer)
 - [MobSF](https://github.com/MobSF/Mobile-Security-Framework-MobSF)
-
+- [apksigner](https://developer.android.com/studio/command-line/apksigner)
+- [zipalign](https://developer.android.com/studio/command-line/zipalign)
