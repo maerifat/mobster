@@ -34,4 +34,4 @@ git clone https://github.com/maerifat/mobster && cd mobster && docker build . -t
 - [apksigner](https://developer.android.com/studio/command-line/apksigner)
 - [zipalign](https://developer.android.com/studio/command-line/zipalign)
 - [jadx-gui](https://github.com/skylot/jadx)
-- [jadx]([jadx-gui](https://github.com/skylot/jadx))
+- [jadx](https://github.com/skylot/jadx))
