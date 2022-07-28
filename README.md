@@ -27,7 +27,7 @@ git clone https://github.com/maerifat/mobster && cd mobster && docker build . -t
 - [jd-gui](https://github.com/java-decompiler/jd-gui)
 - [bytecode-viewer](https://github.com/Konloch/bytecode-viewer)
 - [angr](https://github.com/angr/angr)
-- [frida](https://github.com/angr/angr)
+- [frida](https://github.com/frida/frida-tools)
 - [objection](https://github.com/sensepost/objection)
 - [drozer](https://github.com/FSecureLABS/drozer)
 - [MobSF](https://github.com/MobSF/Mobile-Security-Framework-MobSF)
