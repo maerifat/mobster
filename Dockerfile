@@ -1,4 +1,4 @@
-FROM ubuntu:22.04
+FROM ubuntu:22.10
 LABEL org.opencontainers.image.authors="maerifat@gmail.com"
 RUN mkdir -p /home/tools
 RUN mkdir -p /home/dist
